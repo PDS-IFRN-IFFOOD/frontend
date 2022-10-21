@@ -1,6 +1,4 @@
-.tela {
-justify-content: center;
+#tela {
+  justify-content: center;
   align-items: center;
-
-
 }

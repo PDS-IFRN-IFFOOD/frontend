@@ -16,6 +16,7 @@ import Typography from '@mui/material/Typography';
 import FolderIcon from '@mui/icons-material/Folder';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
+import { blue, red } from '@mui/material/colors';
 
 function generate(element) {
   return [0, 1, 2].map((value) =>
@@ -34,11 +35,11 @@ export default function ProductList() {
   const [secondary, setSecondary] = React.useState(false);
 
   return (
-    <Box sx={{ flexGrow: 1, maxWidth: 752 }}>
+    <Box sx={{ flexGrow: 1, maxWidth: 752 }} >
 
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
-        <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
+        <Typography sx={{ mt: 4, mb: 2, }} variant="h3" component="div">
             Listagem de Produtos
           </Typography>
           <Demo>
