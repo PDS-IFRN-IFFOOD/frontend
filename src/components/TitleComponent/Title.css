@@ -1,10 +1,12 @@
 .title {
+  
   font-family: 'Josefin Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 3.6rem;
   line-height: 3.6rem;
   text-align: center;
+  justify-content: center;
 
-  color: #FFA301;
+  color: white;
 }

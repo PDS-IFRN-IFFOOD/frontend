@@ -3,14 +3,15 @@ import Title from '../components/TitleComponent/Title'
 import { SubTitle } from '../components/SubTitleComponent/SubTitle'
 import Description from '../components/DescriptionComponent/DescriptionComponent'
 
-
 // componentes Material UI
 import Grid from '@mui/material/Grid';
 import { Box } from '@mui/material';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import { useTheme } from '@mui/material/styles';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
+import Paper from '@mui/material/Paper';
+
 
 function ProductRegistration() {
 
@@ -28,59 +29,70 @@ function ProductRegistration() {
     },
   });
 
+  const Item = styled(Paper)(({ theme }) => ({ 
+    textAlign: 'center',
+    margin: '20px',
+  }));
+
   return (
-    
       
     <ThemeProvider theme={theme}>
       <Grid 
-        container spacing={3}
+        container spacing={4}
         direction="column"
         justifyContent="center"
         alignItems="center"
-        paddingTop= "100px"
-      >
-
-        <Grid item xs={12}>
-        <Title 
-          title="Cadastrar produto" />
-          </Grid> 
         
-        <Grid item xs={12}>
+      >
+        
+        <Grid item xs={12} sx={{ backgroundColor: '#FFA301', padding: 6, width: 428, height: 107}} >
+          <Title 
+            title="Cadastrar produto" />
+          </Grid> 
+
+
+        <Grid item xs={12} sx={{height: 90, marginTop: 3, width: 390}} >
         <SubTitle
           text="Para cadastrar seus produtos," />
-          </Grid> 
-
-        <Grid item xs={12}>
         <Description
           description="Digite os dados do seu produto para que você aumente suas vendas." />
           </Grid>
 
           <Box>
           <Grid 
-          container spacing={3}
-          direction="column"
-          justifyContent="center"
-          alignItems="center"
-          paddingTop= "100px"
+            container spacing={3}
+            direction="column"
+            justifyContent="center"
+            alignItems="center"
+            padding={4}
+            
           >
           
-        <Grid item xs={12}>
-        <TextField id="outlined-basic" label="Nome" variant="outlined" />
-        </Grid> 
+        <Grid  rowSpacing={6} columnSpacing={{ xs: 1, sm: 2, md: 3 }} sx={{width:350}}  >
 
-        <Grid item xs={12}>
-        <TextField id="outlined-basic" label="Preço " variant="outlined" />
-        </Grid> 
+          <Grid  >
+            <Item>
+              <TextField id="outlined-basic" label="Nome" variant="outlined" size='normal' fullWidth />
+            </Item>
+          </Grid>
 
-        <Grid item xs={12}>
-        <TextField id="outlined-basic" label="Descrição" variant="outlined" />
-        </Grid> 
+          <Grid  >
+            <Item>
+              <TextField id="outlined-basic" label="Preço "   variant="outlined" fullWidth/>
+            </Item>
+          </Grid>
 
+          <Grid  >
+            <Item>
+              <TextField id="outlined-basic" label="Descrição" variant="outlined" fullWidth />
+            </Item>
+          </Grid>        
+        </Grid>
         <Grid item xs={12}>
         
-          <Button color="primary"  variant="contained">
+          <Button color="primary"  variant="contained" size='large' sx={{color: 'white', fontSize: 14}}>
           
-            CADASTRAR
+            CONFIRMAR
           </Button>
         
         
