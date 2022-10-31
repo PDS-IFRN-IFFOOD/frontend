@@ -47,7 +47,7 @@ function ProductRegistration() {
         
         <Grid item xs={12} sx={{ backgroundColor: '#FFA301', padding: 6, width: 428, height: 107}} >
           <Title 
-            title="Cadastrar produto" />
+            title="Cadastrar Produto" />
           </Grid> 
 
 
@@ -89,14 +89,19 @@ function ProductRegistration() {
           </Grid>        
         </Grid>
         <Grid item xs={12}>
+          <Button color='secondary' variant='contained' size='small'>
+            Upload da imagem
+          </Button>
+        </Grid>
+
+        <Grid item xs={12}>
         
           <Button color="primary"  variant="contained" size='large' sx={{color: 'white', fontSize: 14}}>
-          
             CONFIRMAR
           </Button>
-        
-        
+
         </Grid>
+
         </Grid>
         </Box>
 
