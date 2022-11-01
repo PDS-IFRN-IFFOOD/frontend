@@ -12,6 +12,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 
+//import de icones
+import { Camera, ArrowCircleLeft } from 'phosphor-react'
 
 function ProductRegistration() {
 
@@ -45,9 +47,12 @@ function ProductRegistration() {
         
       >
         
-        <Grid item xs={12} sx={{ backgroundColor: '#FFA301', padding: 6, width: 428, height: 107}} >
-          <Title 
-            title="Cadastrar Produto" />
+        <Grid item xs={12} sx={{ backgroundColor: '#FFA301', padding: 6, width: 428, height: 90
+        , display:'flex', gap: 1, flexDirection:'row'}} >
+          
+          <ArrowCircleLeft size={40} color="white" weight="bold" />
+          <Title title="Cadastrar Produto"/>
+
           </Grid> 
 
 
@@ -89,7 +94,9 @@ function ProductRegistration() {
           </Grid>        
         </Grid>
         <Grid item xs={12}>
-          <Button color='secondary' variant='contained' size='small'>
+          
+          <Button color='secondary' variant='contained' size='small' sx={{color: 'black'}}>
+            <Camera size={20} color="black" weight="regular" />
             Upload da imagem
           </Button>
         </Grid>
@@ -110,5 +117,6 @@ function ProductRegistration() {
         
   )
 }
+import { PhosphorLogo } from 'phosphor-react';
 
 export default ProductRegistration
