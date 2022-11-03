@@ -2,6 +2,7 @@
 import Title from '../components/TitleComponent/Title'
 import { SubTitle } from '../components/SubTitleComponent/SubTitle'
 import Description from '../components/DescriptionComponent/DescriptionComponent'
+import './ProductRegistration.css'
 
 // componentes Material UI
 import Grid from '@mui/material/Grid';
@@ -29,6 +30,12 @@ function ProductRegistration() {
         main: '#C2C2C2',
       },
     },
+    typography: {
+      fontFamily: [
+        'Josefin Sans',
+        'sans-serif',
+      ].join(','),
+    },
   });
 
   const Item = styled(Paper)(({ theme }) => ({ 
@@ -49,15 +56,15 @@ function ProductRegistration() {
         
         <Grid item xs={12} sx={{ backgroundColor: '#FFA301', padding: 6, width: 428, height: 90
         , display:'flex', gap: 1, flexDirection:'row'}} >
-          
+          <div className='toptitle'>
           <ArrowCircleLeft size={40} color="white" weight="bold" />
           <Title title="Cadastrar Produto"/>
-
+          </div>
           </Grid> 
 
 
         <Grid item xs={12} sx={{height: 90, marginTop: 3, width: 390}} >
-        <SubTitle
+        <SubTitle  sx={{fontFamily: 'Josefin Sans'}}
           text="Para cadastrar seus produtos," />
         <Description
           description="Digite os dados do seu produto para que você aumente suas vendas." />
