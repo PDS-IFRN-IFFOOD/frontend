@@ -6,7 +6,7 @@ import './ProductRegistration.css'
 
 // componentes Material UI
 import Grid from '@mui/material/Grid';
-import { Box } from '@mui/material';
+import { accordionSummaryClasses, Box } from '@mui/material';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -15,6 +15,9 @@ import Paper from '@mui/material/Paper';
 
 //import de icones
 import { Camera, ArrowCircleLeft } from 'phosphor-react'
+
+//axios
+import axios from 'axios';
 
 function ProductRegistration() {
 
@@ -42,6 +45,21 @@ function ProductRegistration() {
     textAlign: 'center',
     margin: '20px',
   }));
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+    const productName = event.target.productName.value;
+    const productPrice = event.target.productPrice.value;
+    const productDescription = event.target.productDescription.value;
+    const imagepath = "MANOCU";
+    axios.post("http://localhost:5000/produtos", {
+      productDescription,
+      productPrice,
+      imagepath,
+      productName
+     
+    })
+  }
 
   return (
       
@@ -80,26 +98,26 @@ function ProductRegistration() {
             
           >
           
+      <form action="" onSubmit={submitHandler}>
         <Grid  rowSpacing={6} columnSpacing={{ xs: 1, sm: 2, md: 3 }} sx={{width:350}}  >
+            <Grid  >
+              <Item>
+                <TextField id="productName" label="Nome" variant="outlined" size='normal' fullWidth />
+              </Item>
+            </Grid>
 
-          <Grid  >
-            <Item>
-              <TextField id="outlined-basic" label="Nome" variant="outlined" size='normal' fullWidth />
-            </Item>
+            <Grid  >
+              <Item>
+                <TextField id="productPrice" label="Preço "   variant="outlined" fullWidth/>
+              </Item>
+            </Grid>
+
+            <Grid  >
+              <Item>
+                <TextField id="productDescription" label="Descrição" variant="outlined" fullWidth multiline rows={4}/>
+              </Item>
+            </Grid>        
           </Grid>
-
-          <Grid  >
-            <Item>
-              <TextField id="outlined-basic" label="Preço "   variant="outlined" fullWidth/>
-            </Item>
-          </Grid>
-
-          <Grid  >
-            <Item>
-              <TextField id="outlined-basic" label="Descrição" variant="outlined" fullWidth />
-            </Item>
-          </Grid>        
-        </Grid>
         <Grid item xs={12}>
           
           <Button color='secondary' variant='contained' size='small' sx={{color: 'black'}}>
@@ -110,11 +128,11 @@ function ProductRegistration() {
 
         <Grid item xs={12}>
         
-          <Button color="primary"  variant="contained" size='large' sx={{color: 'white', fontSize: 14}}>
+          <Button type='submit' color="primary"  variant="contained" size='large' sx={{color: 'white', fontSize: 14}}>
             CONFIRMAR
           </Button>
-
         </Grid>
+      </form>
 
         </Grid>
         </Box>

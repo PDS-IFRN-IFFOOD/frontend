@@ -1,12 +1,15 @@
 //imports de pages
 
-import ProductRegistration from '../src/pages/ProductRegistration'
+
+import ProductList from './pages/ProductList'
+import ProductRegistration from './pages/ProductRegistration'
+
 
 function App() {
 
   return (
     
-    <ProductRegistration />
+    <ProductList/>
   )
 }
 
