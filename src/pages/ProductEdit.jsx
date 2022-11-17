@@ -19,7 +19,7 @@ import { Camera, ArrowCircleLeft } from 'phosphor-react'
 //axios
 import axios from 'axios';
 
-function ProductRegistration() {
+function ProductEdit() {
 
   const theme = createTheme({
     palette: {
@@ -51,8 +51,8 @@ function ProductRegistration() {
     const productName = event.target.productName.value;
     const productPrice = event.target.productPrice.value;
     const productDescription = event.target.productDescription.value;
-    const imagepath = "MANOCU";
-    axios.post("http://localhost:5000/produtos", {
+    const imagepath = "something";
+    axios.put(`http://localhost:5000/produtos/${id}`, {
       productDescription,
       productPrice,
       imagepath,
@@ -76,14 +76,14 @@ function ProductRegistration() {
         , display:'flex', gap: 1, flexDirection:'row'}} >
           <div className='toptitle'>
           <ArrowCircleLeft size={40} color="white" weight="bold" />
-          <Title title="Cadastrar Produto"/>
+          <Title title="Editar Produto"/>
           </div>
           </Grid> 
 
 
         <Grid item xs={12} sx={{height: 90, marginTop: 3, width: 390}} >
         <SubTitle  sx={{fontFamily: 'Josefin Sans'}}
-          text="Para cadastrar seus produtos," />
+          text="Para editar seus produtos," />
         <Description
           description="Digite os dados do seu produto para que você aumente suas vendas." />
           </Grid>
@@ -98,7 +98,7 @@ function ProductRegistration() {
             
           >
           
-      <form action="" onSubmit={submitHandler}>
+      <form onSubmit={submitHandler}>
         <Grid  rowSpacing={6} columnSpacing={{ xs: 1, sm: 2, md: 3 }} sx={{width:350}}  >
             <Grid  >
               <Item>
@@ -144,4 +144,4 @@ function ProductRegistration() {
 }
 
 
-export default ProductRegistration
+export default ProductEdit
