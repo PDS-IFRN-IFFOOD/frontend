@@ -2,6 +2,7 @@
 
 
 import ProductList from './pages/ProductList'
+import ProductEdit from './pages/ProductEdit'
 import ProductRegistration from './pages/ProductRegistration'
 
 

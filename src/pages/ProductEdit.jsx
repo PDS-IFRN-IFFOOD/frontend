@@ -118,20 +118,18 @@ function ProductEdit() {
               </Item>
             </Grid>        
           </Grid>
-        <Grid item xs={12}>
-          
-          <Button color='secondary' variant='contained' size='small' sx={{color: 'black'}}>
-            <Camera size={20} color="black" weight="regular" />
-            Upload da imagem
-          </Button>
-        </Grid>
+          <Grid item xs={18} sx={{ textAlign: 'center' }} >
+                <Button color='secondary' variant='contained' size='small' sx={{ color: 'black'}}>
+                  <Camera size={20} color="black" weight="regular" />
+                  Upload da imagem
+                </Button>
+          </Grid>
 
-        <Grid item xs={12}>
-        
-          <Button type='submit' color="primary"  variant="contained" size='large' sx={{color: 'white', fontSize: 14}}>
-            CONFIRMAR
-          </Button>
-        </Grid>
+          <Grid item xs={18} sx={{padding: 4, textAlign: 'center' }} >
+                <Button type='submit' color="primary" variant="contained" size='large' sx={{ color: 'white', fontSize: 14 }}>
+                  CONFIRMAR
+                </Button>
+          </Grid>
       </form>
 
         </Grid>
