@@ -2,3 +2,7 @@
     flex-direction: row;
     align-content: space-between;
 }
+
+.buttonupload{
+    text-align: center
+}
