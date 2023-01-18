@@ -1,17 +1,12 @@
-//imports de pages
+import React from 'react';
 
-
-import ProductList from './pages/ProductList'
-import ProductEdit from './pages/ProductEdit'
-import ProductRegistration from './pages/ProductRegistration'
+import Routes from './Routes';
 
 
 function App() {
-
   return (
-    
-    <ProductList/>
-  )
+        <Routes />
+  );
 }
 
-export default App
+export default App;
