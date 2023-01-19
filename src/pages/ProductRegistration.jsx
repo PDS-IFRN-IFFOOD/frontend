@@ -123,9 +123,7 @@ function ProductRegistration() {
               </Grid>
 
 
-            </form>
 
-          </Grid>
 
 
           <Grid item xs={18} sx={{ textAlign: 'center' }} >
@@ -140,6 +138,9 @@ function ProductRegistration() {
                   CONFIRMAR
                 </Button>
           </Grid>
+          </form>
+
+        </Grid>
           </Box>
         </Grid>
 
