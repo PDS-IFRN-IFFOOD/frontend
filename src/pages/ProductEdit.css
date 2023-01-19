@@ -89,13 +89,3 @@ header{
   padding: 5px;
   padding-top: 10px;
 }
-
-
-.toptitle{
-    flex-direction: row;
-    align-content: space-between;
-}
-
-.buttonupload{
-    text-align: center
-}

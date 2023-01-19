@@ -74,13 +74,19 @@ header{
     transition: 0.5s;
 }
 
+.abcde {
+    font-size: 20px;
+    padding-top: 100px;
+    color: black;
+}
+
 
 .sidebar a:hover{
     background: #b47200;
 }
 
 .listagem {
-    padding-left: 0%;
+    padding-left: 39%;
     padding-top: 5rem;
     
 }
@@ -90,12 +96,3 @@ header{
   padding-top: 10px;
 }
 
-
-.toptitle{
-    flex-direction: row;
-    align-content: space-between;
-}
-
-.buttonupload{
-    text-align: center
-}

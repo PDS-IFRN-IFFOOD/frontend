@@ -12,7 +12,7 @@ import Typography from '@mui/material/Typography';
 import EditIcon from '@mui/icons-material/Edit';
 import axios from 'axios';
 import { useState, useEffect} from "react";
-import "./ProductList.css"
+import "./Home.css"
 import "./img/filazerologo.png"
 
 
@@ -67,39 +67,7 @@ export default function ProductList() {
     </div>
     
     <div className="listagem">
-    <Box sx={{ flexGrow: 1, maxWidth: 752 }} >
-
-      <Grid container spacing={2}>
-        <Grid item xs={12} md={6}>
-        <Typography sx={{ mt: 4, mb: 2, }} variant="h3" component="div">
-            Listagem de Produtos
-          </Typography>
-          <Demo>
-            <List dense={dense}>
-              {products.map((product) => (
-                <ListItem
-                  key={product.product_id}
-                  secondaryAction={
-                    <IconButton>
-                      <EditIcon />
-                    </IconButton>
-                  }
-                >
-                  <ListItemAvatar>
-                  <Avatar alt="Remy Sharp" src="src/assets/230446.jpg" />
-                  </ListItemAvatar>
-                  <ListItemText
-                    primary={product.name}
-                    secondary={formatMoney(product.price/100)}
-                  />
-                </ListItem>
-              ))}
-            </List>
-          </Demo>
-        </Grid>
-      </Grid>
-      
-    </Box>
+        <h3 className='h3bemvindo'>Bem-vindo ao Fila Zero!</h3>
     </div>
 
     </div>

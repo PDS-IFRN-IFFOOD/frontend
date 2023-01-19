@@ -62,13 +62,40 @@ function ProductRegistration() {
   }
 
   return (
+    <body>
+    <div className='container'>
+    <header>
+      <div className="left">
+        <h3>Fila <span>Zero</span></h3>
+      </div>
+      <div className="right">
+        <a href="#" className="sair_btn">Sair</a>
+      </div>
+    </header>
+
+  
+
+    <div className="sidebar">
+      <center>
+        <h2>Fila Zero</h2>
+      </center>
+      
+      <a href="/#/registrar"><span class="material-symbols-outlined">home</span><span>Início</span></a>
+      <a href="/#/registrar"><span class="material-symbols-outlined">add</span><span>Registrar um produto</span></a>
+      <a href="#/sobre"><span class="material-symbols-outlined">info</span><span>Conheça-nos</span></a>
+      <a href="#/editar"><span class="material-symbols-outlined">edit</span><span>Editar</span></a>
+      <a href="#"><span class="material-symbols-outlined">person</span><span>Usuário</span></a>
+      <a href="#/listagem"><span class="material-symbols-outlined">list</span><span>Lista de produtos</span></a>
+      
+    </div>
+    
+    <div className="listagem">
 
     <ThemeProvider theme={theme}>
       <Grid
         container spacing={4}
         direction="column"
-        justifyContent="center"
-        alignItems="center"
+
 
       >
 
@@ -94,8 +121,6 @@ function ProductRegistration() {
           <Grid
             container spacing={3}
             direction="column"
-            justifyContent="center"
-            alignItems="center"
             padding={4}
 
           >
@@ -126,14 +151,14 @@ function ProductRegistration() {
 
 
 
-          <Grid item xs={18} sx={{ textAlign: 'center' }} >
+          <Grid item xs={18} sx={{paddingLeft: 15 }} >
                 <Button color='secondary' variant='contained' size='small' sx={{ color: 'black'}}>
                   <Camera size={20} color="black" weight="regular" />
                   Upload da imagem
                 </Button>
           </Grid>
 
-          <Grid item xs={18} sx={{padding: 4, textAlign: 'center' }} >
+          <Grid item xs={18} sx={{paddingLeft: 15, paddingTop: 5 }} >
                 <Button type='submit' color="primary" variant="contained" size='large' sx={{ color: 'white', fontSize: 14 }}>
                   CONFIRMAR
                 </Button>
@@ -148,6 +173,13 @@ function ProductRegistration() {
 
 
     </ThemeProvider>
+    </div>
+
+</div>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
 
   )
 }
